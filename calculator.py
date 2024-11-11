@@ -25,13 +25,9 @@ class Calculator:
         return -result if negative_result else result
     
     def modulo(self, a, b):
-        if b == 0:
-            raise ValueError("Cannot perform modulo by zero.")
-        negative_result = a < 0
-        a, b = abs(a), abs(b)
         while a >= b:
-            a = self.subtract(a, b)
-        return -a if negative_result else a
+            a = a-b
+        return a
 
 
 
